@@ -7,7 +7,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h2>BE YOURSELF, VALUE YOURSELF, CODE YOURSELF</h2>
+        <h2>NEVER MUTATE THE STATE, NEVER !!!</h2>
         <div className="col-sm-12">
               <div className="leafFalls">
                 <h4> A: {this.props.a}</h4>
@@ -26,15 +26,15 @@ class App extends Component {
 
 const mSTP = (state)=>{
   return {
-    a:state.a,
-    b:state.b,
+    a:state.rA.a,
+    b:state.rB.b
   }
 }
 
 const mDTP = (dispatch)=>{
   return {
-    action1:()=>dispatch({type:'ACTION_1'}), // here the action is heading towards the reducer
-    action2:()=>dispatch({type:'ACTION_2'}),
+    action1:()=>dispatch({type:'ACTION_A'}), // here the action is heading towards the reducer
+    action2:()=>dispatch({type:'ACTION_B'}),
   }
 }
 

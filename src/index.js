@@ -5,11 +5,11 @@ import {Provider} from 'react-redux';
 
 import './index.css';
 import App from './App';
-import reducer from './store/reducer';
+import rootReducer from './store/rootReducer';
 import * as serviceWorker from './serviceWorker';
 
 
-const store = createStore(reducer);
+const store = createStore(rootReducer);
 
 
 ReactDOM.render(
