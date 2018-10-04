@@ -11,3 +11,5 @@ const reducer = (state=initialState,action)=>{
 
     return newState;
 }
+
+export default reducer;
