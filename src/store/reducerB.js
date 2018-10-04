@@ -8,7 +8,7 @@ const reducerB = (state=initialState,action)=>{
         case 'ACTION_B':
         return{
             ...state,
-            b:state.b + 2
+            b:state.b + action.payload
         }
         default:
         return state;

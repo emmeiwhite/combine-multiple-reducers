@@ -11,12 +11,12 @@ class App extends Component {
         <div className="col-sm-12">
               <div className="leafFalls">
                 <h4> A: {this.props.a}</h4>
-                <button className="btn btn-danger" onClick={this.props.action1}>People Change</button>
+                <button className="btn btn-danger" onClick={()=>this.props.actionA(this.props.b)}>People Change</button>
               </div>
 
               <div className="leafFalls">
                 <h4> B: {this.props.b}</h4>
-                <button className="btn btn-warning" onClick={this.props.action2}>State Change</button>
+                <button className="btn btn-warning" onClick={()=>this.props.actionB(this.props.a)}>State Change</button>
               </div>
         </div>
       </div>
@@ -33,8 +33,8 @@ const mSTP = (state)=>{
 
 const mDTP = (dispatch)=>{
   return {
-    action1:()=>dispatch({type:'ACTION_A'}), // here the action is heading towards the reducer
-    action2:()=>dispatch({type:'ACTION_B'}),
+    actionA:(b)=>dispatch({type:'ACTION_A',payload:b}), // action is heading towards the reducer
+    actionB:(a)=>dispatch({type:'ACTION_B',payload:a}),
   }
 }
 
